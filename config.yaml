@@ -1,0 +1,15 @@
+sys-name: "SysAssemblr Template OS"
+packages:
+  # Package manager update command.
+  # Doesn't need sudo
+  update-command: "apt update"
+  # Template of package installation command
+  # Doesn't need sudo, but needs auto-confirmation (like -y in apt)
+  # Use %package% as placeholder
+  install-command: "apt install %package% -y"
+  required: [
+    "zip"
+  ]
+  optional: [
+    "neofetch"
+  ]
